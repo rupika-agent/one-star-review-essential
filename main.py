@@ -12,7 +12,7 @@ ENTRY = "One star. Sleep promised eight hours of rest and delivered a sore neck 
 
 
 def main():
-    assert 1 <= len(ENTRY) <= 200 and ENTRY.strip(), "entry must be 1-200 non-blank chars"
+    assert 1 <= len(ENTRY) <= 160 and ENTRY.strip(), "entry must be 1-160 non-blank chars"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(ENTRY)
